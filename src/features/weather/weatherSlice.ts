@@ -77,7 +77,7 @@ export const fetchWeather = createAsyncThunk(
     const queryCity = city || state.weather.defaultCity;
 
     const response = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${queryCity}&days=6&aqi=no&alerts=no`
+      `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${queryCity}&days=6&aqi=no&alerts=no`
     );
 
     if (!response.ok) {
